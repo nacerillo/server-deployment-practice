@@ -2,8 +2,8 @@
 const express = require("express");
 const app = express();
 
-const notFoundHandler = require("./hanlders/404.js");
-const errorHandler = require("./handler/500.js");
+const notFoundHandler = require("./handlers/404.js");
+const errorHandler = require("./handlers/500.js");
 const stamper = require("./middleware/stamper.js");
 
 app.get("/", stamper, (req, res) => {

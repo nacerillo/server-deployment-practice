@@ -13,7 +13,7 @@ describe("API Server", () => {
   });
 
   it("handles errors", async () => {
-    const response = await request.get("./bad");
+    const response = await request.get("/bad");
     expect(response.status).toEqual(500);
     expect(response.body.route).toEqual("/bad");
   });
