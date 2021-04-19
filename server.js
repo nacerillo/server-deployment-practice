@@ -9,7 +9,8 @@ const stamper = require("./middleware/stamper.js");
 app.get("/", stamper, (req, res) => {
   res.status(200).send("Hello World");
 });
-
+//app.use -> gobal middleware function- all incoming requests will pope through this
+//these should always go at the bottom of the code
 app.get("/data", stamper, (req, res) => {
   let outputObject = {
     10: "even",
